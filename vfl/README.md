@@ -1,16 +1,1 @@
-# vfl: A Flower / PyTorch app
-
-## Install dependencies and project
-
-```bash
-pip install -e .
-```
-
-## Run with the Simulation Engine
-
-In the `vfl` directory, use `flwr run` to run a local simulation:
-
-```bash
-flwr run .
-```
-
+This project demonstrates the implementation of Vertical Federated Learning (VFL) using the Flower framework, where multiple parties collaboratively train a machine learning model without sharing raw data. The Titanic dataset is partitioned vertically across clients, with entity alignment ensuring consistent sample matching. Clients generate embeddings from their local features, which are aggregated by the server model (logistic regression) to compute loss and gradients. Gradients are then distributed back for local backpropagation, enabling privacy-preserving training. The project includes data preprocessing, client/server design, embedding exchange, and evaluation within a simulated federated environment.
